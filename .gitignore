@@ -20,3 +20,12 @@ start/.gradle/buildOutputCleanup/buildOutputCleanup.lock
 start/.gradle/buildOutputCleanup/cache.properties
 start/.gradle/buildOutputCleanup/outputFiles.bin
 start/.gradle/vcs-1/gc.properties
+*.iml
+.gradle
+/local.properties
+.idea
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+
