@@ -26,6 +26,7 @@ import android.os.SystemClock
 import android.text.format.DateUtils
 import androidx.core.app.AlarmManagerCompat
 import androidx.core.content.ContextCompat
+import com.example.android.eggtimernotifications.util.cancelNotifications
 
 class SnoozeReceiver: BroadcastReceiver() {
     private val REQUEST_CODE = 0
@@ -47,6 +48,11 @@ class SnoozeReceiver: BroadcastReceiver() {
             triggerTime,
             notifyPendingIntent
         )
+
+        val notificationManager = ContextCompat.getSystemService(
+                context,
+                NotificationManager::class.java) as NotificationManager
+        notificationManager.cancelNotifications()
     }
 
 }
